@@ -15,20 +15,5 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    # Setup Node
-    - name: Setup Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '18'
-
-    # Install dependencies
-    - name: Install dependencies
-      run: npm install
-
-    # Run tests (we’ll add later)
-    - name: Run Tests
-      run: echo "No tests yet!"
-
-    # Run the app (for verification)
-    - name: Run app
-      run: npm start &
+    - name: Build docker image
+      run: docker build -t my-ci-app .
