@@ -1,4 +1,4 @@
-name: CI/CD to Render (Staging + Prod)
+name: CI/CD to Render
 
 on:
   push:
